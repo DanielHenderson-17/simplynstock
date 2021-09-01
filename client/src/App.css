@@ -1,0 +1,478 @@
+html {
+  height: 100%;
+  background-color: #E6E7E8;
+}
+
+.debug {
+  border: solid 1px red;
+}
+
+.gridContainer {
+  background-color: #E6E7E8;
+  display: grid;
+  margin: 2px;
+  height: 98vh;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  'nav header header header header summary'
+  'nav header header header header summary'
+  'nav main main main main main'
+  'nav main main main main main'
+  'nav main main main main main'
+  'nav main main main main main'
+  'nav main main main main main';
+}
+
+/*SideNav*/
+.item1 { 
+  grid-area: nav;
+  margin: 3px;
+  background-color: #3D3D48;
+}
+
+.topNav {
+  color: white;
+  font-size: 23px;
+  padding: 15px;
+  padding-left: 70px;
+  margin: 0px 0px;
+}
+
+.bottomNav {
+  color: white;
+  font-size: 23px;
+  padding: 15px;
+  padding-left: 70px;
+  margin: 0px 0px;
+}
+
+.dashboard, .inventory, .addItem  {
+  color: #25A6EE;
+  background-color: #1A1A2F;
+  border-left: 6px solid #25A6EE;
+}
+
+.navHr {
+  width: 80%;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+a:link, a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #f8fafc;
+}
+
+/*Header*/
+.item2 { 
+  grid-area: header;
+  margin: 10px 0px;
+  border-right: 3px solid #CDCDCD;
+  background-color: #e9eaea;
+}
+
+.item2 h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.item2 img {
+  justify-content: center;
+}
+
+/*Inventory Sum*/
+.item3 { 
+  margin: 10px 0px;
+  grid-area: summary;
+  background-color: #E6E7E8;
+}
+
+.item3 h2 {
+  font-weight: 400;
+  margin-left: 20px;
+}
+
+.item3 div {
+  background-color: #FFFFFF;
+  font-weight: 400;
+  margin-left: 33px;
+  margin-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: solid 1px #AAA1A1;
+  border-radius: 5px;
+  width: 80%;
+  display:flex;
+  align-items: center;
+  justify-content: left;
+  box-shadow: 3px 3px 10px rgb(126, 125, 125) ;
+}
+
+.invSum h3 {
+  font-size: 12px;
+  width: 70%;
+  font-weight: 500;
+}
+
+.invSum p {
+  border-left: 2px solid #B4B3B3;
+  margin-left: 30px;
+  margin-right: 40px;
+  width: 20%;
+  font-weight: 700;
+  padding-left: 20px;
+  text-align: right;
+}
+
+/*Main Content*/
+.item4 {
+  grid-area: main;
+  border-radius: 5px;
+  height: 612px;
+  background-color: white;
+  border: 1px solid #B4B3B3;
+  overflow: auto;
+}
+
+.infoContainer {
+  border-radius: 5px 5px 0px 0px;
+  border: 1px solid #B4B3B3;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 10px rgb(153, 152, 152) ;
+}
+
+.containerMain {
+  border: 1px solid #B4B3B3;
+  margin: 10px;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 3px 3px 10px rgb(153, 152, 152) ;
+}
+
+.CcontainerHead {
+  width: 100%;
+  height: 4%;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: 5px;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.containerBody {
+  width: 100%;
+  height: 97%;
+  overflow: auto;
+  box-shadow: 3px 3px 10px rgb(153, 152, 152) ;
+}
+
+.item4 h3 {
+  font-weight: 500;
+  padding-left: 2px;
+  margin: 0px 0px;
+  background-color: #E6E7E8;
+  border-radius: 5px 5px 0px 0px;
+  
+}
+
+.item4Top {
+  height: 250px; 
+}
+
+.inventoryDetails, .recentlyAdded {
+  margin: 13px;
+  padding: 0px;
+  display: inline-block;
+  width: 46%;
+  height: 90%;
+  border: 1px solid #B4B3B3;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+  box-shadow: 3px 3px 10px rgb(153, 152, 152) ;
+}
+
+.recentlyAdded {
+  width: 50%;
+}
+
+.quantities {
+  display: inline-block;
+  padding: 10px 0px 70px 0px;
+  margin-top: 10px;
+  width: 65%;
+  border-right: 1px solid #B4B3B3;
+}
+
+.quantities h5 {
+  margin: 0px 10px;
+  width: 80%;
+}
+
+.quantities p {
+  width: 15%;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.percentage {
+  margin-top: 10px;
+  margin-left: 40px;
+  text-align: center;
+  width: 20%;
+  display: inline-block;
+  border-bottom: none;
+}
+
+.recentThree {
+  margin-left: 25px;
+  margin-top: 15px;
+  padding: 0px;
+  width: 28%;
+  color: black;
+  max-height: 200px;
+  display: inline-block;
+  border-right: 1px solid #B4B3B3;
+}
+
+.recentThree:last-child {
+  border: none;
+}
+
+.recentLink:hover {
+  color: black;
+}
+
+.recentImg {
+  height: 100px;
+  max-width: 200px;
+  display: block;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 8px;
+}
+
+.inventoryLocationsSub {
+  display: grid;
+  width: 98%;
+  height: 330px;
+  padding-right: 10px;
+  margin-top: 10px;
+  margin-left: 5px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas: 
+  'locationhead locationhead'
+  'locationmain locationmain'
+  'locationmain locationmain'
+  'locationmain locationmain'
+  'locationmain locationmain'
+  'locationmain locationmain'
+  'locationmain locationmain'
+  'locationmain locationmain';
+}
+
+.inventoryLocationsSub h4{
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 0px;
+  margin-left: 2px;
+  border: 1px solid grey;
+  background-color: #3D3D48;
+  color: white;
+}
+
+.inventoryLocations {
+  margin: 0px 11px;
+  width: 98%;
+  height: 58%;
+  border: 1px solid #B4B3B3;
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 3px 3px 10px rgb(153, 152, 152) ;
+}
+
+.locationsHeader {
+  grid-area: locationhead;
+  padding: 3px;
+  display: inline-block;
+  width: 100%;
+  margin-right: 0px;
+  margin-left: 0px;
+  margin-bottom: 3px;
+}
+
+.locationsHeader h4 {
+  padding: 3px;
+  margin-left: 0px;
+}
+
+.inventoryLocationsName {
+  width: 42%;
+  margin-top: 0px;
+}
+
+.firstQuantity {
+  margin-right: 35px;
+}
+
+.locationContainer {
+  margin-top: 1px;
+  height: 54px;
+  border-bottom: 1px solid #B4B3B3;
+  width: 96%;
+}
+
+.locationContainer a:hover {
+  color: black;
+}
+
+.locationContainer:last-child {
+  border: none;
+}
+
+.locationName{
+  display: inline-block;
+  width: 93%;
+  margin: 0px 5px 20px 5px;
+}
+
+.locationQuantity {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.oneImg {
+  display: inline-block;
+  margin: 30px 100px 5px 30px;
+  width: 250px;
+  max-height: 500px;
+}
+
+.stockOneH1 {
+  display: block;
+  text-align: center;
+}
+
+.itemContainer {
+  width: 70%;
+}
+
+.itemInfo {
+  display: inline-block;
+}
+
+.itemInfo h3 {
+  font-size: 14px;
+  text-align: center;
+}
+
+.itemInfo p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  text-align: center;
+}
+
+form {
+  font-size: 14px;
+  padding: 5px;
+  margin: 5px 20px;
+}
+
+.editBtn {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+label {
+  margin-left: 5px;
+}
+
+input, select {
+  background-color: #E6E7E8;
+  height: 30px;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  margin: 0px 5px 12px 5px;
+  display: block;
+}
+
+.textBox input {
+  display: block;
+  width: 30%;
+}
+
+select {
+  display: block;
+  width: 20%;
+}
+
+.otherBox input {
+  display: block;
+  width: 9%;
+}
+
+.addBtn {
+  width: 8%;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+.addBtn:hover {
+  background-color: #3D3D48;
+  color: white;
+  cursor: pointer;
+  border: 1px solid blue;
+}
+
+table {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 99%;
+  outline: 1px solid #CDCDCD;
+}
+
+table th {
+  background-color: #3D3D48;
+  text-align: left;
+  color: white;
+  padding: 6px;
+}
+
+#trStyle {
+  border-bottom: 1px solid black;
+  height: 30px;
+}
+
+table tr {
+  height: 30px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:hover {
+  background-color: #6060a3;
+  color: #f8fafc;
+}
+
+td {
+  border-left: 2px solid #CDCDCD;
+  border-bottom: 2px solid #CDCDCD;
+  padding-left: 10px;
+}
+
+.editBtn2, .deleteBtn{
+  margin: 5px;
+  width: 50px;
+}
