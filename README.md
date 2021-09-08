@@ -34,4 +34,4 @@ Clicking on a specific `city/state` takes user to all stock for that location.
 
 Header displays `Total Inventory Cost` across all pages(total of all inventory qty*all cost)
 
-
+![Demo}(https://user-images.githubusercontent.com/69319302/132560180-b7d48a71-3a40-4946-ac39-8104f84fe7e5.gif)
